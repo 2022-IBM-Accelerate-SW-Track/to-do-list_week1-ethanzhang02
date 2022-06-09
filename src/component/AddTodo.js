@@ -39,12 +39,14 @@ class AddTodo extends Component {
         // 3. The value of the text field also should reflect the local state of this component.
         <div>
           <TextField
+        data-testid="new-item-input"
         label="Add New Item"
         variant="outlined"
-        onChange={this.onChange}
+        onChange={this.handleChange}
         value={this.state.content}
       />
-      <Button
+      <Button 
+        data-testid="new-item-button"
         style={{ marginLeft: "10px" }}
         onClick={this.handleSubmit}
         variant="contained"
